@@ -1,0 +1,12 @@
+@import 'common';
+
+.container {
+    align-items: center;
+    background-color: $color-primary;
+    color: $color-text-light;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    padding: 16px;
+    width: 100%;
+}
