@@ -1,13 +1,11 @@
-import type { NextPage } from 'next'
+import Header from '../common/components/Header';
 
-import {Header} from '../common/components/Header';
-
-const Home: NextPage = () => {
+function Home() {
   return (
     <div>
       <Header />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
