@@ -12,10 +12,10 @@ datasource db {
 
 model Account {
   id                String  @id @default(cuid())
-  userId            String  @map("user_id")
+  userId            String
   type              String
   provider          String
-  providerAccountId String  @map("provider_account_id")
+  providerAccountId String
   refresh_token     String? @db.Text
   access_token      String? @db.Text
   expires_at        Int?
@@ -32,7 +32,7 @@ model Account {
 
 model Session {
   id           String   @id @default(cuid())
-  sessionToken String   @unique @map("session_token")
+  sessionToken String   @unique
   userId       String   @map("user_id")
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -41,16 +41,16 @@ model Session {
 }
 
 model User {
-  id                    String    @id @default(uuid())
-  created_at            DateTime  @default(now())
-  user_id               String?   @unique
-  email                 String?   @unique
-  name                  String?
-  emailVerified         DateTime? @map("email_verified")
-  image                 String?
-  location_lat          Float?
-  location_lng          Float?
-  questions_and_answers Json?
+  id            String    @id @default(uuid())
+  createdAt     DateTime  @default(now())
+  userId        String?   @unique
+  email         String?   @unique
+  name          String?
+  emailVerified DateTime?
+  image         String?
+  locationLat   Float?
+  locationLng   Float?
+  handicap      Float?
 
   accounts Account[]
   sessions Session[]
