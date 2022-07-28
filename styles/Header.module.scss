@@ -10,3 +10,24 @@
     padding: 16px;
     width: 100%;
 }
+
+.subContainer {
+    align-items: center;
+    display: flex;
+}
+
+.logo {
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+
+    :first-child {
+        margin-right: 4px;
+    }
+}
+
+.searchBar {
+    align-items: center;
+    display: flex;
+    margin-left: 24px;
+}
