@@ -1,7 +1,9 @@
+/* global google */
 import {
   useCallback, useEffect, useReducer, useRef,
 } from 'react';
 import { GetServerSideProps } from 'next';
+/* eslint-disable camelcase */
 import { unstable_getServerSession } from 'next-auth/next';
 import { Button, TextField } from '@mui/material';
 import { useSWRConfig } from 'swr';
