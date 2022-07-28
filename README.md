@@ -10,6 +10,7 @@ DATABASE_URL=
 ```
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
+GOOGLE_MAPS_API_KEY=
 ```
 1. Install postgres and run it locally. Run migrations using the following command: `npx prisma generate && npx prisma migrate dev`
 1. Run the app with the following command: `npm run dev`
